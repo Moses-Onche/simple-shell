@@ -102,7 +102,7 @@ void cd_previous(data_shell *datash)
 		set_env("PWD", cp_oldpwd, datash);
 	p_pwd = _getenv("PWD", datash->_environ);
 	write(STDOUT_FILENO, p_pwd, _strlen(p_pwd));
-	write(STDOUT_FILENO, "\n", 1)
+	write(STDOUT_FILENO, "\n", 1);
 	free(cp_pwd);
 	if (p_oldpwd)
 		free(cp_oldpwd);
@@ -138,5 +138,5 @@ void cd_to_home(data_shell *datash)
 	set_env("OLDPWD", p_pwd, datash);
 	set_env("PWD", home, datash);
 	free(p_pwd);
-	datash->status = 0;
+	datash->status = 0
 }
