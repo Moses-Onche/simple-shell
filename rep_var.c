@@ -143,7 +143,7 @@ char *rep_var(char *input, data_shell *datash)
 
 	status = aux_itoa(datash->status);
 	head = NULL;
-	olen = check_vars(&head, input, status, datash)
+	olen = check_vars(&head, input, status, datash);
 	if (head == NULL)
 	{
 		free(status);
@@ -159,7 +159,7 @@ char *rep_var(char *input, data_shell *datash)
 	nlen += olen;
 	new_input = malloc(sizeof(char) * (nlen + 1));
 	new_input[nlen] = '\0';
-	new_input = replaced_input(&head, input, new_input, nlen)
+	new_input = replaced_input(&head, input, new_input, nlen);
 	free(input);
 	free(status);
 	free_rvar_list(&head);
