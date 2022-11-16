@@ -138,5 +138,5 @@ void cd_to_home(data_shell *datash)
 	set_env("OLDPWD", p_pwd, datash);
 	set_env("PWD", home, datash);
 	free(p_pwd);
-	datash->status = 0
+	datash->status = 0;
 }
